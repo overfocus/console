@@ -264,6 +264,8 @@ class MainFrame
 			COMMAND_ID_HANDLER(ID_FONT_INFO,               OnFontInfo)
 			COMMAND_ID_HANDLER(ID_DIAGNOSE,                OnDiagnose)
 			COMMAND_ID_HANDLER(ID_SPLIT_SWAP,              OnSwap)
+			COMMAND_ID_HANDLER(ID_SAVE_WORKSPACE,          OnSaveSession)
+			COMMAND_ID_HANDLER(ID_LOAD_WORKSPACE,          OnLoadSession)
 
 			COMMAND_RANGE_HANDLER(ID_EXTERNAL_COMMAND_1, (ID_EXTERNAL_COMMAND_1 + EXTERNAL_COMMANDS_COUNT - 1), OnExternalCommand)
 			COMMAND_RANGE_HANDLER(ID_SNIPPET_ID_FIRST, ID_SNIPPET_ID_LAST, OnSnippet)
@@ -378,6 +380,9 @@ class MainFrame
 
 		LRESULT OnExternalCommand(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 		LRESULT OnSnippet(WORD /*wNotifyCode*/, WORD wID, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
+
+		LRESULT OnSaveSession(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
+		LRESULT OnLoadSession(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 
 	public:
 
